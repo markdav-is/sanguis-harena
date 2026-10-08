@@ -157,3 +157,4 @@ main.content { max-width: 1120px; }
 </div>
 <p class="sh-note">Card art is AI-generated placeholder art, disclosed per DriveThruRPG policy. Wicked Combo is commissioning human artists for future printings &mdash; this release funds that work.</p>
 </div>
+
