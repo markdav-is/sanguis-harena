@@ -1,0 +1,48 @@
+name: Publish site to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - '.github/workflows/publish.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install wikidown
+        run: curl -fsSL https://wikidown.org/install.sh | sh
+
+      - name: Export site to static HTML
+        run: |
+          export PATH="$HOME/.wikidown/bin:$PATH"
+          wikidown export-html --output ./_site \
+            --base-url / \
+            --title "A Gladiatorial Card Game" \
+            --clean --root docs
+          echo "sanguisharena.com" > ./_site/CNAME
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+      - id: deploy
+        uses: actions/deploy-pages@v5
