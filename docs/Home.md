@@ -73,6 +73,10 @@ main.content { max-width: 1120px; margin: 0 auto; padding-left: 1.5rem; padding-
 .sh-note { max-width: 720px; margin: 2rem auto 0; font-size: 0.85rem; color: var(--c-muted); }
 .sh-freerules { text-align: center; margin-top: 1.4rem; color: var(--c-muted); }
 .sh-freerules a { color: var(--c-accent); }
+.sh-footer { text-align: center; padding: 3rem 0 2rem; border-top: 1px solid var(--c-border); margin-top: 2rem; }
+.sh-footer img { width: 76px; border-radius: 0.6rem; }
+.sh-footer p { color: var(--c-muted); font-size: 0.85rem; margin-top: 0.8rem; }
+.sh-footer a { color: var(--c-accent); }
 </style>
 
 <div class="sh-hero">
@@ -161,5 +165,10 @@ main.content { max-width: 1120px; margin: 0 auto; padding-left: 1.5rem; padding-
 </div>
 <p class="sh-freerules">Just want the rules? <a href=".attachments/sanguis-et-harena-rulebook.pdf">Download the free rulebook (PDF)</a></p>
 <p class="sh-note">Card art is AI-generated placeholder art, disclosed per DriveThruRPG policy. Wicked Combo is commissioning human artists for future printings &mdash; this release funds that work.</p>
+</div>
+
+<div class="sh-footer">
+<a href="https://wickedcombo.com/"><img src=".attachments/wicked-combo-logo.jpg" alt="Wicked Combo"></a>
+<p>Published by <a href="https://wickedcombo.com/">Wicked Combo</a> &middot; &copy; 2026</p>
 </div>
 
