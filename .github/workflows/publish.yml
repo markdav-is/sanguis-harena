@@ -6,6 +6,7 @@ on:
     paths:
       - 'docs/**'
       - '.github/workflows/publish.yml'
+      - '.github/head-tags.html'
   workflow_dispatch:
 
 permissions:
@@ -38,6 +39,23 @@ jobs:
             --clean --root docs
           echo "sanguisharena.com" > ./_site/CNAME
           cp ./_site/Home.html ./_site/index.html
+
+      - name: Inject head tags (social preview + favicon)
+        run: |
+          python3 << 'PYEOF'
+          import glob, re
+          tags = open('.github/head-tags.html').read()
+          for f in glob.glob('./_site/*.html'):
+              s = open(f).read()
+              if 'my-og-tags' in s:
+                  continue
+              # strip wikidown's own og/twitter tags so ours are authoritative
+              s = re.sub(r'<meta[^>]*property="og:[^"]*"[^>]*>\s*', '', s)
+              s = re.sub(r'<meta[^>]*name="twitter:[^"]*"[^>]*>\s*', '', s)
+              s = s.replace('</head>', '<!-- my-og-tags -->\n' + tags + '\n</head>', 1)
+              open(f, 'w').write(s)
+              print('injected into', f)
+          PYEOF
 
       - uses: actions/configure-pages@v5
 
