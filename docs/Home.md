@@ -27,6 +27,10 @@ main.content { max-width: 1120px; margin: 0 auto; padding-left: 1.5rem; padding-
   font-size: clamp(2.6rem, 6vw, 4.2rem); line-height: 1.05; margin: 0 0 1rem;
   color: var(--c-accent);
 }
+.sh-aka {
+  color: var(--c-muted); letter-spacing: 0.45em; text-transform: uppercase;
+  font-size: 0.95rem; margin: 0 0 1.4rem;
+}
 .sh-tagline { font-size: 1.3rem; font-style: italic; color: var(--c-ink); margin-bottom: 2rem; }
 .sh-cta {
   display: inline-block; background: var(--c-accent); color: #141009;
@@ -83,6 +87,7 @@ main.content { max-width: 1120px; margin: 0 auto; padding-left: 1.5rem; padding-
 <div>
 <div class="sh-kicker">Wicked Combo presents</div>
 <div class="sh-title">Sanguis<br>et Harena</div>
+<div class="sh-aka">Blood and Sand</div>
 <p class="sh-tagline">A tactical card game of timing, positioning, and nerve.</p>
 <a class="sh-cta" href="https://www.drivethrurpg.com/en/product/588027/sanguis-harena">Get the Game on DriveThruRPG</a>
 <p class="sh-price">36-card print-and-play deck &mdash; $14.99 &middot; rulebook PDF included</p>
