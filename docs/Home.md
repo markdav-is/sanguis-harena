@@ -71,6 +71,8 @@ main.content { max-width: 1120px; margin: 0 auto; padding-left: 1.5rem; padding-
 }
 .sh-buybox .sh-big { font-size: 2rem; color: var(--c-accent); font-weight: bold; margin: 0.5rem 0; }
 .sh-note { max-width: 720px; margin: 2rem auto 0; font-size: 0.85rem; color: var(--c-muted); }
+.sh-freerules { text-align: center; margin-top: 1.4rem; color: var(--c-muted); }
+.sh-freerules a { color: var(--c-accent); }
 </style>
 
 <div class="sh-hero">
@@ -157,6 +159,7 @@ main.content { max-width: 1120px; margin: 0 auto; padding-left: 1.5rem; padding-
 <div class="sh-big">$14.99</div>
 <a class="sh-cta" href="https://www.drivethrurpg.com/en/product/588027/sanguis-harena">Get the Game on DriveThruRPG</a>
 </div>
+<p class="sh-freerules">Just want the rules? <a href=".attachments/sanguis-et-harena-rulebook.pdf">Download the free rulebook (PDF)</a></p>
 <p class="sh-note">Card art is AI-generated placeholder art, disclosed per DriveThruRPG policy. Wicked Combo is commissioning human artists for future printings &mdash; this release funds that work.</p>
 </div>
 
