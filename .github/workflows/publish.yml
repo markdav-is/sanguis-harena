@@ -37,6 +37,7 @@ jobs:
             --title "A Gladiatorial Card Game" \
             --clean --root docs
           echo "sanguisharena.com" > ./_site/CNAME
+          cp ./_site/Home.html ./_site/index.html
 
       - uses: actions/configure-pages@v5
 
