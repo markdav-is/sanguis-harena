@@ -169,6 +169,6 @@ main.content { max-width: 1120px; margin: 0 auto; padding-left: 1.5rem; padding-
 
 <div class="sh-footer">
 <a href="https://wickedcombo.com/"><img src=".attachments/wicked-combo-logo.jpg" alt="Wicked Combo"></a>
-<p>Published by <a href="https://wickedcombo.com/">Wicked Combo</a> &middot; &copy; 2026</p>
+<p>Published by <a href="https://wickedcombo.com/">Wicked Combo</a> &middot; &copy; 2026 &middot; <a href="Press-Kit.html">Press kit</a></p>
 </div>
 
